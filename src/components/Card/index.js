@@ -1,11 +1,15 @@
-const Card = ({ title, times }) => {
+const Card = ({ title, times, image }) => {
   const renderTimes = times?.map(({ session }) => {
-    return <div className="card__time">{session?.session_date_tz}</div>;
+    return (
+      <div key={session.id} className="card__time">
+        {session?.session_date_tz}
+      </div>
+    );
   });
   return (
     <div className="card">
       <div className="card__pic">
-        <img src="" />
+        <img src={image} />
       </div>
       <h2 className="card__title">{title}</h2>
       <div className="card__times">{renderTimes}</div>

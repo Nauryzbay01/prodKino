@@ -1,0 +1,15 @@
+.cards__wrapper {
+    display: flex;
+    height: 100%;
+    width: 75%;
+    background-color: black;
+    color: white;
+}
+.card {
+    width: 9%;
+    padding: 0 1%;
+}
+.card__pic img {
+    display: block;
+    width: 100%;
+}
