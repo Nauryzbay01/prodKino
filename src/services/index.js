@@ -1,4 +1,4 @@
-export const getCards = async (date) => {
+export const getData = async (date) => {
   try {
     const response = await fetch(
       `https://api.kino.kz/sessions/v1/cinema/sessions?cinema_id=99&date=${date}&filter_by=movie`,
