@@ -3,11 +3,7 @@ import Cards from "../../components/Cards";
 import LeftTable from "../../components/LeftTable";
 import { getCards } from "../../services";
 import "../../styles/main-page.css";
-import { getCards } from "../../services";
-import { useEffect, useState } from "react";
 const MainPage = ({ date }) => {
-
-
   const [timetable, setTimetable] = useState([]);
 
   const fetchData = async () => {
