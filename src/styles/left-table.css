@@ -1,5 +1,33 @@
 .left-table {
-  background-color: #000;
+  background: rgb(86, 49, 181);
+  background: linear-gradient(
+    180deg,
+    rgba(86, 49, 181, 0.8) 0%,
+    rgba(45, 43, 197, 0.8) 100%
+  );
   width: 25%;
   height: 100%;
+  color: #fff;
+}
+
+.left-table-header {
+  padding-left: 10%;
+  background: #000;
+  height: 6%;
+  display: flex;
+}
+
+.left-table-header .header-session {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+}
+
+.left-table-header .header-date {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
 }
