@@ -7,11 +7,7 @@ import Spinner from "../../components/Spinner";
 
 import "../../styles/main-page.css";
 
-
-
-const MainPage = ({ date }) => {
-
-
+const MainPage = () => {
   const [timetable, setTimetable] = useState([]);
   const [loading, setLoading] = useState(false);
 
