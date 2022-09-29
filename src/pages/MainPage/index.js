@@ -1,22 +1,29 @@
+import { useEffect, useState } from "react";
 import Cards from "../../components/Cards";
 import LeftTable from "../../components/LeftTable";
+import { getCards } from "../../services";
 import "../../styles/main-page.css";
 import { getCards } from "../../services";
 import { useEffect, useState } from "react";
 const MainPage = ({ date }) => {
-  const [cardsList, setCardsList] = useState([]);
+
+
+  const [timetable, setTimetable] = useState([]);
+
+  const fetchData = async () => {
+    const data = await getCards(date);
+    setTimetable(data);
+  };
+
   useEffect(() => {
-    const handleCompany = async () => {
-      const response = await getCards(date);
-      setCardsList(response);
-    };
-    handleCompany();
+    fetchData();
   }, []);
+
   return (
     <div className="container">
       <div className="page__wrapper">
-        <LeftTable date={date} cards={cardsList} />
-        <Cards date={date} cards={cardsList} />
+        <LeftTable date={date} timetable={timetable} />
+        <Cards date={date} timetable={timetable} />
       </div>
     </div>
   );
