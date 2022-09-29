@@ -27,7 +27,7 @@ const MainPage = () => {
   return (
     <div className="container">
       <div className="page__wrapper">
-        <LeftTable date={getDate} timetable={timetable} />
+        <LeftTable timetable={timetable} />
         <Cards date={getDate} timetable={timetable} />
       </div>
     </div>

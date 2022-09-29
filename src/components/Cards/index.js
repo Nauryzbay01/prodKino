@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import "../../styles/right-style.css";
 const Cards = ({ timetable }) => {
   const [cardsList, setCardsList] = useState([]);
-  console.log(timetable);
   const renderFullItems = timetable?.result?.sessions?.map(
     ({ items, movie }) => {
       return (

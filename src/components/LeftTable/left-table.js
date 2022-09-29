@@ -1,8 +1,8 @@
 import "../../styles/left-table.css";
-// import { getFormatData } from "../../utils";
+import { getFormatData } from "../../utils";
 
-function LeftTable({ date, timetable: { result } }) {
-  // const formatData = getFormatData(result);
+function LeftTable({ timetable: { result } }) {
+  const formatData = getFormatData(result);
 
   return (
     <div className="left-table">
