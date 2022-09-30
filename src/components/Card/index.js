@@ -1,8 +1,9 @@
+import { sliceTime } from "../../utils";
 const Card = ({ title, times, image }) => {
   const renderTimes = times?.map(({ session }) => {
     return (
       <div key={session.id} className="card__time">
-        {session?.session_date_tz}
+        {sliceTime(session?.session_date_tz)}
       </div>
     );
   });
