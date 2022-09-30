@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import "../../styles/right-style.css";
 const Cards = ({ timetable }) => {
   const [cardsList, setCardsList] = useState([]);
-  const renderFullItems = timetable?.result?.sessions?.map(
-    ({ items, movie }) => {
+  const renderFullItems = timetable?.result?.sessions
+    ?.slice(0, 18)
+    .map(({ items, movie }) => {
       return (
         <Card
           image={movie.posters.p1200x1730}
@@ -13,9 +14,13 @@ const Cards = ({ timetable }) => {
           times={items}
         />
       );
-    }
+    });
+  return (
+    <div className="right">
+      <h2 className="cards__header">Сегодня в экранах</h2>
+      <div className="cards__wrapper">{renderFullItems}</div>
+    </div>
   );
-  return <div className="cards__wrapper">{renderFullItems}</div>;
 };
 
 export default Cards;

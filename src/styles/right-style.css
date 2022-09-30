@@ -1,15 +1,36 @@
 .cards__wrapper {
     display: flex;
-    height: 100%;
-    width: 75%;
-    background-color: black;
-    color: white;
 }
 .card {
-    width: 9%;
-    padding: 0 1.5%;
+    width: 5.5%;
+}
+.card__pic {
+    padding: 0 15% 10% 15%;
 }
 .card__pic img {
     display: block;
     width: 100%;
+}
+.card__times {
+    font-size: calc(100vh / 25);
+}
+.right {
+    height: 100%;
+    width: 80%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 1.1;
+}
+.right h2 {
+    font-size: calc(100vh / 35);
+    height: 10%;
+}
+.right .cards__header {
+    font-size: calc(100vh / 15);
+    height: 10%;
+    margin-top: 0.2%;
+}
+.card__time {
+    margin-top: 7%;
 }
