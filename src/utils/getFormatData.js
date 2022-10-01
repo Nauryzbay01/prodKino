@@ -5,7 +5,6 @@ export const sliceTime = (time) => {
 
 const extractData = (data) => {
   const sessions = data?.sessions;
-  console.log(sessions);
   const allSessions = [];
 
   for (let i = 0; i < sessions?.length; i++) {

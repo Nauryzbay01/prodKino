@@ -13,7 +13,8 @@
   height: 500px;
   display: flex;
 }
-s .loader-container {
+
+.loader-container {
   position: absolute;
   top: 50%;
   right: 50%;
@@ -42,6 +43,7 @@ s .loader-container {
   height: 6px;
   border-radius: 50%;
 }
+
 .loader::before {
   left: auto;
   top: auto;
