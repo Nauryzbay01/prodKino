@@ -1,8 +1,6 @@
 import Card from "../Card";
-import { useEffect, useState } from "react";
 import "../../styles/right-style.css";
 const Cards = ({ timetable }) => {
-  const [cardsList, setCardsList] = useState([]);
   const renderFullItems = timetable?.result?.sessions
     ?.slice(0, 18)
     .map(({ items, movie }) => {
