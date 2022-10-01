@@ -1,5 +1,5 @@
-import getDate from "./getDate";
+import date from "./getDate";
 import getFormatData from "./getFormatData";
 import { sliceTime } from "./getFormatData";
 
-export { getDate, getFormatData, sliceTime };
+export { date, getFormatData, sliceTime };

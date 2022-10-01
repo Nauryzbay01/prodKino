@@ -17,7 +17,7 @@ const Cards = ({ timetable }) => {
     });
   return (
     <div className="right">
-      <h2 className="cards__header">Сегодня в экранах</h2>
+      <h2 className="cards__header">Сегодня на экранах</h2>
       <div className="cards__wrapper">{renderFullItems}</div>
     </div>
   );
