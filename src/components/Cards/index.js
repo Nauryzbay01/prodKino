@@ -2,7 +2,7 @@ import Card from "../Card";
 import "../../styles/right-style.css";
 const Cards = ({ timetable }) => {
   const renderFullItems = timetable?.result?.sessions
-    ?.slice(0, 18)
+    ?.slice(0, 11)
     .map(({ items, movie }) => {
       return (
         <Card
@@ -16,7 +16,10 @@ const Cards = ({ timetable }) => {
   return (
     <div className="right">
       <h2 className="cards__header">Сегодня на экранах</h2>
-      <div className="cards__wrapper">{renderFullItems}</div>
+      <div className="cards__wrapper">
+        <div className="bg"></div>
+        {renderFullItems}
+      </div>
     </div>
   );
 };

@@ -1,8 +1,25 @@
 .cards__wrapper {
     display: flex;
 }
+.right {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.bg {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    height: 50%;
+    right: 0;
+    background-image: url(../images/images.jfif);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
 .card {
-    width: 5.5%;
+    width: 9%;
 }
 .card__pic {
     padding: 0 15% 10% 15%;
@@ -12,7 +29,8 @@
     width: 100%;
 }
 .card__times {
-    font-size: calc(100vh / 25);
+    /* font-size: calc(100vh / 30); */
+    font-size: 33px;
 }
 .right {
     height: 100%;
@@ -23,11 +41,14 @@
     line-height: 1.1;
 }
 .right h2 {
-    font-size: calc(100vh / 35);
-    height: 10%;
+    /* font-size: calc(100vh / 40); */
+    font-size: 25px;
+    height: 18%;
+    padding: 0 10px;
 }
 .right .cards__header {
-    font-size: calc(100vh / 15);
+    /* font-size: calc(100vh / 15); */
+    font-size: 63px;
     height: 10%;
     margin-top: 0.2%;
 }
