@@ -1,6 +1,6 @@
 import { sliceTime } from "../../utils";
 const Card = ({ title, times, image }) => {
-  const renderTimes = times?.slice(0, 7).map(({ session }) => {
+  const renderTimes = times?.slice(0, 8).map(({ session }) => {
     return (
       <div key={session.id} className="card__time">
         {sliceTime(session?.session_date_tz)}

@@ -6,9 +6,10 @@
 
 .left-table-header {
   background: #000;
-  height: 6%;
+  height: 8%;
   display: flex;
-  font-size: calc(100vh / 25);
+  /* font-size: calc(100vh / 38); */
+  font-size: 27px;
 }
 
 .left-table-header .header-session {
@@ -28,7 +29,7 @@
 }
 
 .left-table .sessions {
-  height: 94%;
+  height: 92%;
   background-color: black;
 }
 
@@ -38,7 +39,7 @@
   /* background: rgb(86, 49, 181);
   background: linear-gradient(180deg, rgba(86, 49, 181, 0.9) 0%, rgba(45, 43, 197, 0.9) 100%); */
   background-color: #373767;
-  border: calc(100vh / 400) solid black;
+  border: 3px solid black;
 }
 
 .left-table .sessions .card-session .session-info {
@@ -56,16 +57,18 @@
   flex-direction: column;
   height: 100%;
   width: 30%;
-  font-size: calc(100vh / 40);
+  /* font-size: calc(100vh / 40); */
+  font-size: 25px;
   line-height: 1;
-  border-left: calc(100vh / 240) solid black;
+  border-left: 4px solid black;
 }
 .session-time .movie {
   display: block;
   margin-bottom: 2%;
 }
 .text-block .movie {
-  font-size: calc(100vh / 33);
+  /* font-size: calc(100vh / 44); */
+  font-size: 23px;
   line-height: 1;
 }
 
@@ -73,7 +76,8 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  width: 10%;
+  width: 20%;
+  flex-shrink: 0;
 }
 
 .left-table .sessions .card-session .session-info .text-block {
