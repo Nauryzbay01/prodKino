@@ -10,6 +10,9 @@
     background-repeat: no-repeat;
     background-size: cover; */
 }
+h3 {
+    color: #000;
+}
 .right:before {
     position: absolute;
     top: 0;
