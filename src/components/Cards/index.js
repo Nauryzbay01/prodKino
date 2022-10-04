@@ -1,16 +1,23 @@
 import Card from "../Card";
 import "../../styles/right-style.css";
 import { useState, useEffect } from "react";
+import Spinner from "../Spinner";
 
 const Cards = ({ timetable }) => {
   const [first, setFirst] = useState(0);
   const [last, setLast] = useState(7);
+  const [animation, setAnimation] = useState(false);
   const sessions = timetable?.result.sessions;
 
   useEffect(() => {
     if (sessions?.length <= 7) return;
 
     const interval = setInterval(() => {
+      setAnimation(true);
+      setInterval(() => {
+        setAnimation(false);
+      }, 750);
+
       if (first === 0) {
         setFirst(7);
       }
@@ -23,7 +30,7 @@ const Cards = ({ timetable }) => {
       if (last === 14) {
         setLast(7);
       }
-    }, 17000);
+    }, 18000);
 
     return () => {
       clearInterval(interval);
@@ -47,8 +54,7 @@ const Cards = ({ timetable }) => {
     <div className="right">
       <h2 className="cards__header">Сегодня на экранах</h2>
       <div className="cards__wrapper">
-        <div className="bg"></div>
-        {renderItems(first, last)}
+        {animation ? <Spinner /> : renderItems(first, last)}
       </div>
     </div>
   );
