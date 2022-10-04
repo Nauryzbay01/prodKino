@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Cards from "../../components/Cards";
-import LeftTable from "../../components/LeftTable";
+// import LeftTable from "../../components/LeftTable";
 import { getData } from "../../services";
 import { date } from "../../utils";
 import Spinner from "../../components/Spinner";
@@ -36,7 +36,7 @@ const MainPage = () => {
   return (
     <div className="container">
       <div className="page__wrapper">
-        <LeftTable timetable={timetable} />
+        {/* <LeftTable timetable={timetable} /> */}
         <Cards date={date} timetable={timetable} />
       </div>
     </div>

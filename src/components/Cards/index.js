@@ -2,7 +2,7 @@ import Card from "../Card";
 import "../../styles/right-style.css";
 const Cards = ({ timetable }) => {
   const renderFullItems = timetable?.result?.sessions
-    ?.slice(0, 11)
+    ?.slice(0, 13)
     .map(({ items, movie }) => {
       return (
         <Card
