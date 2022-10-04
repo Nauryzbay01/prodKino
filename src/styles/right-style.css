@@ -33,7 +33,7 @@
   z-index: -1;
 } */
 .card {
-    width: 8.3%;
+    width: 12.5%;
 }
 .card__pic {
     padding: 0 15px 20px 15px;
@@ -44,7 +44,7 @@
 }
 .card__times {
     /* font-size: calc(100vh / 30); */
-    font-size: 25px;
+    font-size: 30px;
     text-shadow: 3px 0 3px #000, 0 3px 3px #000, -3px 0 3px #000, 0 -3px 3px #000;
 }
 .right {
@@ -57,7 +57,7 @@
 }
 .right h2 {
     /* font-size: calc(100vh / 40); */
-    font-size: 25px;
+    font-size: 32px;
     height: 100px;
     padding: 0 10px;
     text-shadow: 3px 0 3px #000, 0 3px 3px #000, -3px 0 3px #000, 0 -3px 3px #000;
