@@ -62,7 +62,7 @@
 .right h2 {
   /* font-size: calc(100vh / 40); */
   font-size: 25px;
-  height: 18%;
+  height: 120px;
   padding: 0 10px;
   text-shadow: 3px 0 3px #000, 0 3px 3px #000, -3px 0 3px #000, 0 -3px 3px #000;
 }
