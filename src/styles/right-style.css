@@ -1,57 +1,78 @@
 .cards__wrapper {
-    display: flex;
+  display: flex;
 }
 .right {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-image: url(../images/bg.jpeg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.bg {
-    position: absolute;
-    bottom: 0%;
-    left: 0;
-    height: 50%;
-    right: 0;
-    background-image: url(../images/bg.jfif);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+.right:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    rgba(185, 183, 183, 0.02),
+    rgba(0, 0, 0, 0.58)
+  );
+  z-index: -1;
 }
+/* .bg {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  height: 100%;
+  right: 0;
+  background-image: url(../images/bg.jpeg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+} */
 .card {
-    width: 9%;
+  width: 9%;
 }
 .card__pic {
-    padding: 0 15% 10% 15%;
+  padding: 0 15% 10% 15%;
 }
 .card__pic img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 .card__times {
-    /* font-size: calc(100vh / 30); */
-    font-size: 33px;
+  /* font-size: calc(100vh / 30); */
+  font-size: 33px;
+  text-shadow: 3px 0 3px #000, 0 3px 3px #000, -3px 0 3px #000, 0 -3px 3px #000;
 }
 .right {
-    height: 100%;
-    width: 80%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    line-height: 1.1;
+  height: 100%;
+  width: 70%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 1.1;
 }
 .right h2 {
-    /* font-size: calc(100vh / 40); */
-    font-size: 25px;
-    height: 18%;
-    padding: 0 10px;
+  /* font-size: calc(100vh / 40); */
+  font-size: 25px;
+  height: 18%;
+  padding: 0 10px;
+  text-shadow: 3px 0 3px #000, 0 3px 3px #000, -3px 0 3px #000, 0 -3px 3px #000;
 }
 .right .cards__header {
-    /* font-size: calc(100vh / 15); */
-    font-size: 63px;
-    height: 10%;
-    margin-top: 0.2%;
+  /* font-size: calc(100vh / 15); */
+  font-size: 55px;
+  height: 8%;
+  margin-top: 0.2%;
+  margin-bottom: 0.5%;
 }
 .card__time {
-    margin-top: 7%;
+  margin-top: 7%;
 }

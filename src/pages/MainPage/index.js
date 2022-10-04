@@ -15,6 +15,7 @@ const MainPage = () => {
     const fetchData = async () => {
       setLoading(true);
       const data = await getData(date);
+      console.log(data);
       setLoading(false);
       setTimetable(data);
     };
