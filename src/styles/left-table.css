@@ -1,35 +1,35 @@
 .left-table {
-  width: 20%;
+  width: 30%;
   height: 100%;
   color: #fff;
 }
 
-.left-table-header {
+/* .left-table-header {
   background: #000;
   height: 8%;
   display: flex;
-  /* font-size: calc(100vh / 38); */
+   font-size: calc(100vh / 38); 
   font-size: 27px;
-}
+} */
 
-.left-table-header .header-session {
+/* .left-table-header .header-session {
   display: flex;
   align-items: center;
   height: 100%;
   padding-left: 8%;
   width: 70%;
-}
+} */
 
-.left-table-header .header-date {
+/* .left-table-header .header-date {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30%;
-}
+} */
 
 .left-table .sessions {
-  height: 92%;
+  height: 100%;
   background-color: black;
 }
 
@@ -58,7 +58,7 @@
   height: 100%;
   width: 30%;
   /* font-size: calc(100vh / 40); */
-  font-size: 25px;
+  font-size: 30px;
   line-height: 1;
   border-left: 4px solid black;
 }
@@ -68,7 +68,7 @@
 }
 .text-block .movie {
   /* font-size: calc(100vh / 44); */
-  font-size: 23px;
+  font-size: 30px;
   line-height: 1;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .left-table .sessions .card-session .session-info .text-block {
-  padding-left: 4%;
+  padding: 0 2% 0 0;
   height: 100%;
   display: flex;
   align-items: center;

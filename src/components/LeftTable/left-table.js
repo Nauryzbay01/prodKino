@@ -35,10 +35,6 @@ function LeftTable({ timetable: { result } }) {
 
   return (
     <div className="left-table">
-      <div className="left-table-header">
-        <div className="header-session">БЛИЖАЙШИЕ СЕАНСЫ</div>
-        <div className="header-date">ВРЕМЯ</div>
-      </div>
       <div className="sessions">{renderNearestSessions()}</div>
     </div>
   );
