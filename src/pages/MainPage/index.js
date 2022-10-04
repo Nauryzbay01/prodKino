@@ -8,16 +8,15 @@ import Spinner from "../../components/Spinner";
 import "../../styles/main-page.css";
 
 const MainPage = () => {
-  const [timetable, setTimetable] = useState([]);
+  const [timetable, setTimetable] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       const data = await getData(date);
-      console.log(data);
-      setLoading(false);
       setTimetable(data);
+      setLoading(false);
     };
 
     const interval = setInterval(() => {
