@@ -8,7 +8,6 @@ const Cards = ({ timetable }) => {
   const [last, setLast] = useState(7);
   const [animation, setAnimation] = useState(false);
   const sessions = timetable?.result.sessions;
-
   useEffect(() => {
     if (sessions?.length <= 7) return;
 
@@ -19,12 +18,12 @@ const Cards = ({ timetable }) => {
       }, 750);
 
       if (first === 0) {
-        setFirst(7);
+        setFirst(sessions?.length - 7);
       }
       if (last === 7) {
         setLast(14);
       }
-      if (first === 7) {
+      if (first === sessions?.length - 7) {
         setFirst(0);
       }
       if (last === 14) {
