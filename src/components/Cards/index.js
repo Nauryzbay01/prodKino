@@ -3,6 +3,7 @@ import "../../styles/right-style.css";
 import { useState, useEffect } from "react";
 
 const Cards = ({ timetable }) => {
+
   const [first, setFirst] = useState(0);
   const [last, setLast] = useState(7);
   const sessions = timetable?.result.sessions;
