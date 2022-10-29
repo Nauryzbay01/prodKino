@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Cards from "../../components/Cards";
-import LeftTable from "../../components/LeftTable";
+// import LeftTable from "../../components/LeftTable";
 import { getData } from "../../services";
 import { date } from "../../utils";
 import Spinner from "../../components/Spinner";
@@ -8,15 +8,15 @@ import Spinner from "../../components/Spinner";
 import "../../styles/main-page.css";
 
 const MainPage = () => {
-  const [timetable, setTimetable] = useState([]);
+  const [timetable, setTimetable] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       const data = await getData(date);
-      setLoading(false);
       setTimetable(data);
+      setLoading(false);
     };
 
     const interval = setInterval(() => {
@@ -35,7 +35,7 @@ const MainPage = () => {
   return (
     <div className="container">
       <div className="page__wrapper">
-        <LeftTable timetable={timetable} />
+        {/* <LeftTable timetable={timetable} /> */}
         <Cards date={date} timetable={timetable} />
       </div>
     </div>
