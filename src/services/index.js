@@ -1,12 +1,15 @@
+import { BASE_URL, cinemaId, cityId, token } from "../constants";
+
 export const getData = async (date) => {
   try {
     const response = await fetch(
-      `https://api.kino.kz/sessions/v1/cinema/sessions?cinema_id=99&date=${date}&filter_by=movie`,
+      `${BASE_URL}/api/movie/today?city=${cityId}&cinema=${cinemaId}`,
       {
         method: "GET",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
       }
     );
