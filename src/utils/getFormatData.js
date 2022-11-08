@@ -1,5 +1,5 @@
 export const sliceTime = (time) => {
-  const sliced = time.split("T")[1].split(":00Z")[0];
+  const sliced = time.split("T")[1].split(":00+")[0];
   return sliced;
 };
 
@@ -42,16 +42,12 @@ const extractFirstUniqueSession = (data) => {
   return uniqueSessions;
 };
 
-const sortByTime = (data) => {
-  const nextDaySessions = data.filter(
-    (el) => el.session.substring(0, 2) === "00"
-  );
-  const todaySessions = data.filter(
-    (el) => el.session.substring(0, 2) !== "00"
-  );
+export const sortByTime = (data) => {
+  const nextDaySessions = data.filter((el) => el.substring(0, 2) === "00");
+  const todaySessions = data.filter((el) => el.substring(0, 2) !== "00");
 
-  nextDaySessions.sort((a, b) => a.session.localeCompare(b.session));
-  todaySessions.sort((a, b) => a.session.localeCompare(b.session));
+  nextDaySessions.sort((a, b) => a.localeCompare(b));
+  todaySessions.sort((a, b) => a.localeCompare(b));
 
   const sortedSessions = todaySessions.concat(nextDaySessions);
   return sortedSessions;

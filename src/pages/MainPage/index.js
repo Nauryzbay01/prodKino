@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Cards from "../../components/Cards";
 // import LeftTable from "../../components/LeftTable";
 import { getData } from "../../services";
-import { date } from "../../utils";
 import Spinner from "../../components/Spinner";
 
 import "../../styles/main-page.css";
@@ -14,8 +13,8 @@ const MainPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const data = await getData(date);
-      setTimetable(data);
+      const data = await getData();
+      setTimetable(data?.data);
       setLoading(false);
     };
 
@@ -36,7 +35,7 @@ const MainPage = () => {
     <div className="container">
       <div className="page__wrapper">
         {/* <LeftTable timetable={timetable} /> */}
-        <Cards date={date} timetable={timetable} />
+        <Cards timetable={timetable} />
       </div>
     </div>
   );
