@@ -46,6 +46,7 @@ export default function combineSeances(data) {
         return session;
       }
     }
+    return null;
   });
 
   return sortByTime(upcoming);
