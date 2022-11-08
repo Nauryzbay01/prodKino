@@ -1,9 +1,10 @@
 import { BASE_URL, cinemaId, cityId, token } from "../constants";
+import { date } from "../utils";
 
-export const getData = async (date) => {
+export const getData = async () => {
   try {
     const response = await fetch(
-      `${BASE_URL}/api/movie/today?city=${cityId}&cinema=${cinemaId}`,
+      `${BASE_URL}/api/schedule/hall_format?city=${cityId}&date_from=${date}&date_to=${date}&sort=seance.start_time&cinema=${cinemaId}`,
       {
         method: "GET",
         headers: {

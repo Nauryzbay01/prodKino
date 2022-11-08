@@ -1,14 +1,14 @@
-import { sliceTime } from "../../utils";
+import { combineSeances } from "../../utils";
 const Card = ({ title, times, image }) => {
-  const renderTimes = times?.slice(0, 12).map(({ session }) => {
+  const renderTimes = times.slice(0, 12).map((seance, i) => {
     return (
-      <div key={session.id} className="card__time">
-        {sliceTime(session?.session_date_tz)}
+      <div key={i} className="card__time">
+        {seance}
       </div>
     );
   });
   return (
-    <div className="card">
+    <div className={"card"}>
       <div className="card__pic">
         <img src={image} alt="card" />
       </div>
