@@ -1,4 +1,3 @@
-import { combineSeances } from "../../utils";
 const Card = ({ title, times, image }) => {
   const renderTimes = times.slice(0, 12).map((seance, i) => {
     return (

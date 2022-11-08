@@ -11,6 +11,8 @@ import { combineSeances } from "../../utils";
 const Cards = ({ timetable }) => {
   const sessions = timetable;
 
+  console.log(sessions);
+
   const renderItems = (first, last) => {
     return sessions
       ?.slice(first, last)
@@ -39,7 +41,7 @@ const Cards = ({ timetable }) => {
           autoplay={{ delay: 18000 }}
           slidesPerGroup={7}
         >
-          {renderItems(0, 15)}
+          {renderItems(0, 20)}
         </Swiper>
       </div>
     </div>
