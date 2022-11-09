@@ -93,3 +93,9 @@ h3 {
 .d-none {
   display: none;
 }
+
+@media only screen and (max-width: 1900px){
+  /* .card__pic img {
+    height: 347px;
+  } */
+}
